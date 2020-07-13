@@ -14,32 +14,41 @@
         //var n1 = 10;
         //var n2 = 3;
         var total = 0;
+        var op = "";
 
         n1 = prompt('Informe um valor para o Primeiro Número:');
         n2 = prompt('Informe um valor para o Segundo Número:');
+        op = prompt('Informe uma operação (+, -, *, /, %)):');
 
         n1 = parseFloat(n1);
         n2 = parseFloat(n2);
-        
-        total = n1 + n2;
-        document.writeln("<h1>Soma de dois números:</h1>");
-        document.writeln("<h2>" + n1 + " + " + n2 + " = " + total + "</h2>");
 
-        total = n1 - n2;
-        document.writeln("<h1>Subtração de dois números:</h1>");
-        document.writeln("<h2>" + n1 + " - " + n2 + " = " + total + "</h2>");
+        if (op == '+') {
+            total = n1 + n2;
+            document.writeln("<h1>Soma de dois números:</h1>");
+            document.writeln("<h2>" + n1 + " + " + n2 + " = " + total + "</h2>");
+        }
+        if (op == '-') {
+            total = n1 - n2;
+            document.writeln("<h1>Subtração de dois números:</h1>");
+            document.writeln("<h2>" + n1 + " - " + n2 + " = " + total + "</h2>");
+        }
+        if (op == '*') {
+            total = n1 * n2;
+            document.writeln("<h1>Multiplicação de dois números:</h1>");
+            document.writeln("<h2>" + n1 + " x " + n2 + " = " + total + "</h2>");
+        }
+        if (op == '/') {
+            total = n1 / n2;
+            document.writeln("<h1>Divisão de dois números:</h1>");
+            document.writeln("<h2>" + n1 + " / " + n2 + " = " + total + "</h2>");
 
-        total = n1 * n2;
-        document.writeln("<h1>Multiplicação de dois números:</h1>");
-        document.writeln("<h2>" + n1 + " x " + n2 + " = " + total + "</h2>");
-
-        total = n1 / n2;
-        document.writeln("<h1>Divisão de dois números:</h1>");
-        document.writeln("<h2>" + n1 + " / " + n2 + " = " + total + "</h2>");
-
-        total = n1 % n2;
-        document.writeln("<h1>Módulo de dois números:</h1>");
-        document.writeln("<h2>" + n1 + " % " + n2 + " = " + total + "</h2>");
+        }
+        if (op == '%') {
+            total = n1 % n2;
+            document.writeln("<h1>Módulo de dois números:</h1>");
+            document.writeln("<h2>" + n1 + " % " + n2 + " = " + total + "</h2>");
+        }
 
     </script>
 
