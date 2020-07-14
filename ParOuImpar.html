@@ -11,6 +11,14 @@
 
     <script>
 
+        function NumeroPar(numero){
+            var retorno = false;
+            if (numero % 2 == 0) {
+                retorno = true;
+            }
+            return retorno;
+        }
+
         var n = 0;
         var par = true;
 
@@ -18,13 +26,14 @@
         
         n = prompt('Informe um número:');
         n = parseInt(n);
-        
-        if (n % 2 == 0) {            
+
+        var resultado = NumeroPar(n);
+
+        if (resultado == true) {
             document.write("<h2>Número "+ n +" é Par</h2>");
         } else {
             document.write("<h2>Número "+ n +" é Impar</h2>");
         }
-
 
     </script>
 
