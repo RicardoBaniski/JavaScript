@@ -4,25 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="BibliotecaJavaScript.js"></script>
     <title>Par ou Impar</title>
 </head>
 
 <body>
 
     <script>
-
-        function NumeroPar(numero){
-            var retorno = false;
-            if (numero % 2 == 0) {
-                retorno = true;
-            }
-            return retorno;
-        }
-
+    
         var n = 0;
         var par = true;
 
-        document.write("<h1>Verifica se um número é Par ou Ímpar</h1>");
+        ExibeCabecalhoH1("Verifica se um número é Par ou Ímpar");
         
         n = prompt('Informe um número:');
         n = parseInt(n);
@@ -30,9 +23,9 @@
         var resultado = NumeroPar(n);
 
         if (resultado == true) {
-            document.write("<h2>Número "+ n +" é Par</h2>");
+            ExibeCabecalhoH2("Número "+ n +" é Par");
         } else {
-            document.write("<h2>Número "+ n +" é Impar</h2>");
+            ExibeCabecalhoH2("Número "+ n +" é Impar");
         }
 
     </script>
