@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar é um Triangulo</title>
+</head>
+
+<body>
+
+    <script>
+
+        var n = 0;
+        var l1 = 0;
+        var l2 = 0;
+        var l3 = 0;
+
+        document.write("<h1>Verifica se um número é Par ou Ímpar</h1>");
+
+        l1 = parseInt(prompt('Informe o tamanho do Lado 1: '));
+        l2 = parseInt(prompt('Informe o tamanho do Lado 2: '));
+        l3 = parseInt(prompt('Informe o tamanho do Lado 3: '));
+
+        if (l1 == l2 && l2 == l3 && l3 == l1) {
+            document.write("<h2>É um Triangulo Equilátero</h2>");
+        } else if (l1 == l2 || l2 == l3 || l3 == l1) {
+            document.write("<h2>É um Triangulo Isósceles</h2>");
+        } else {
+            document.write("<h2>É um Triangulo Retângulo</h2>");
+        }
+
+    </script>
+
+</body>
+
+</html>
