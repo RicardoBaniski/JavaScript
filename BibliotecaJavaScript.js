@@ -1,13 +1,13 @@
 function ExibeCabecalhoH1(msg) {
-    document.writeln("<h1>" + msg + "</h1>");
+    document.writeln(`<h1>${msg}</h1>`);
 }
 
 function ExibeCabecalhoH2(msg) {
-    document.writeln("<h2>" + msg + "</h2>");
+    document.writeln(`<h2>${msg}</h2>`);
 }
 
 function ExibeCabecalhoH3(msg) {
-    document.writeln("<h3>" + msg + "</h3>");
+    document.writeln(`<h3>${msg}</h3>`);
 }
 
 function NumeroPar(numero){
