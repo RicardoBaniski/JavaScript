@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="nh1">Exemplo de uso do JavaScript</h1>
+    <p id="p1"><a href="https://www.mercadolivre.com.br" id="a1">link</a></p>
+    <p id="p2">Teste</p>
+    <script>
+        
+        //Altera o conteúdo
+        window.document.getElementById("p2").innerHTML = "Produção";
+
+        var p = window.document.getElementById("p1");
+        var a = window.document.getElementById("a1");
+        a.href = "http://www.imdb.com";
+    </script>
+
+</body>
+
+</html>
