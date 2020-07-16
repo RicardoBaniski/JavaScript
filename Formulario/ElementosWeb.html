@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Elementos web</title>
+</head>
+
+<body>
+
+    <script>
+
+        function AlteraTexto() {
+            document.form1.txtValorB.value = document.form1.txtValorA.value;
+        }
+
+        function AlteraConteudo() {
+            document.getElementById("h1Texto").innerHTML = document.form1.txtValorB.value;
+            document.getElementById("h1Texto").style.color = "red";
+        }
+
+        function OcultaConteudo() {
+            document.getElementById("h1Texto").style.display = "none";
+        }
+
+        function ExibeConteudo() {
+            document.getElementById("h1Texto").style.display = "block";
+        }
+
+    </script>
+
+    <form id="form1" name="form1" method="post">
+
+        <p>
+            <label for="txtValorA">Valor A</label>
+            <input type="text" name="txtValorA" id="txtValorA" onchange="AlteraTexto()">
+        </p>
+
+        <p>
+            <label for="txtValorB">Valor B</label>
+            <input type="text" name="txtValorB" id="txtValorB">
+        </p>
+
+        <p>
+            <input type="button" name="btnExecutar" id="btnExecutar" value="Executar" onclick="AlteraConteudo()"></inpu>
+            <input type="button" name="btnOculta" id="btnOculta" value="Oculta" onclick="OcultaConteudo()"></inpu>
+            <input type="button" name="btnExibe" id="btnExibe" value="Exibe" onclick="ExibeConteudo()"></inpu>
+        </p>
+
+    </form>
+    <h1 id="h1Texto">Texto padrão</h1>
+
+</body>
+
+</html>
