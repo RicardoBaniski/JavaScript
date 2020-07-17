@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Tabuada - Calculadora</title>
+</head>
+
+<body>
+
+    <script>
+
+        function EscondeDivs(id) {
+            document.getElementById("tabuada").style.display = "none";
+            document.getElementById("calculadora").style.display = "none";
+            if (id != "") document.getElementById(id).style.display = "block";
+        }
+
+    </script>
+
+    <main>
+
+        <nav>
+
+            <a href="#" onclick="">
+                <img src="imagens/calculadora.jfif" width="100" alt="calculadora" />
+            </a>
+
+            <a href="#" onclick="">
+                <img src="imagens/tabuada.jfif" width="100" alt="tabuada" />
+            </a>
+
+        </nav>
+
+        <div id="tabuada">
+            <p>Div da Tabuada</p>
+        </div>
+
+        <div id="calculadora">
+            <p>Div da Calculadora</p>
+        </div>
+
+        <script>
+
+            EscondeDivs("tabuada");
+
+        </script>
+
+    </main>
+
+</body>
+
+</html>
