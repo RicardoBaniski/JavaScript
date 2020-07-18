@@ -17,24 +17,44 @@
             if (id != "") document.getElementById(id).style.display = "block";
         }
 
+        function ExecutaTabuada() {
+            var n = document.formTabuada.number.value;
+            var resulta = 0;
+            var html = "";
+            for (let index = 0; index <= 10; index++) {
+                result = eval(index + "*" + n);
+                html += "<p>" + n + " x " + index + " = " + result + "</p>";
+            }
+            document.getElementById("conteudoTabuada").innerHTML = html;
+        }
+
     </script>
 
     <main>
 
         <nav>
 
-            <a href="#" onclick="">
+            <a href="#" onclick="EscondeDivs('calculadora')">
                 <img src="imagens/calculadora.jfif" width="100" alt="calculadora" />
             </a>
 
-            <a href="#" onclick="">
-                <img src="imagens/tabuada.jfif" width="100" alt="tabuada" />
+            <a href="#" onclick="EscondeDivs('tabuada')">
+                <img src="imagens/tabuada.png" width="100" alt="tabuada" />
             </a>
 
         </nav>
 
         <div id="tabuada">
-            <p>Div da Tabuada</p>
+            <form id="formTabuada" name="formTabuada" method="post">
+                <label for="number">Informe um número para mostrar a Tabuada:</label>
+                <input type="number" name="number" id="button"></input>
+                <input type="button" name="button" id="button" value="Exibir Tabuada"
+                    onclick="ExecutaTabuada()"></input>
+            </form>
+            <h2>Tabuada</h2>
+            <div id="conteudoTabuada">
+
+            </div>
         </div>
 
         <div id="calculadora">
