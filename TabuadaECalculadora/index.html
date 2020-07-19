@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo.css" rel="stylesheet" type="text/css">
     <title>Exercício - Tabuada - Calculadora</title>
 </head>
 
@@ -28,47 +29,65 @@
             document.getElementById("conteudoTabuada").innerHTML = html;
         }
 
+        function calcula(operação) {
+            var valorA = document.form1.txtVa.value;
+            var valorB = document.form1.txtVb.value;
+            var result = eval(valorA + operação + valorB);
+            document.form1.txtTotal.value = result;
+        }
+
     </script>
-
     <main>
-
         <nav>
-
-            <a href="#" onclick="EscondeDivs('calculadora')">
-                <img src="imagens/calculadora.jfif" width="100" alt="calculadora" />
-            </a>
-
-            <a href="#" onclick="EscondeDivs('tabuada')">
-                <img src="imagens/tabuada.png" width="100" alt="tabuada" />
-            </a>
-
+            <p>
+                <a href="#" onclick="EscondeDivs('calculadora')">
+                    <img src="imagens/calculadora.jfif" width="100" alt="calculadora" />
+                </a>
+            </p>
+            <p>
+                <a href="#" onclick="EscondeDivs('tabuada')">
+                    <img src="imagens/tabuada.png" width="100" alt="tabuada" />
+                </a>
+            </p>
         </nav>
-
-        <div id="tabuada">
-            <form id="formTabuada" name="formTabuada" method="post">
-                <label for="number">Informe um número para mostrar a Tabuada:</label>
-                <input type="number" name="number" id="button"></input>
-                <input type="button" name="button" id="button" value="Exibir Tabuada"
-                    onclick="ExecutaTabuada()"></input>
-            </form>
-            <h2>Tabuada</h2>
-            <div id="conteudoTabuada">
-
+        <article>
+            <div id="tabuada">
+                <form id="formTabuada" name="formTabuada" method="post">
+                    <label for="number">Informe um número para mostrar a Tabuada:</label>
+                    <input type="number" name="number" id="button"></input>
+                    <input type="button" name="button" id="button" value="Exibir Tabuada"
+                        onclick="ExecutaTabuada()"></input>
+                </form>
+                <h2>Tabuada</h2>
+                <div id="conteudoTabuada"></div>
             </div>
-        </div>
-
-        <div id="calculadora">
-            <p>Div da Calculadora</p>
-        </div>
-
+            <div id="calculadora">
+                <form id="form1" name="form1" method="post">
+                    <p>
+                        <label for="txtVa">Valor A:</label>
+                        <input type="number" name="txtVa" id="txtVa">
+                        <label for="txtVb">Valor B:</label>
+                        <input type="number" name="txtVb" id="txtVb">
+                    </p>
+                    <p>
+                        <input type="button" name="button1" id="button1" value="+" onclick="calcula('+')">
+                        <input type="button" name="button2" id="button2" value="-" onclick="calcula('-')">
+                        <input type="button" name="button3" id="button3" value="*" onclick="calcula('*')">
+                        <input type="button" name="button4" id="button4" value="/" onclick="calcula('/')">
+                    </p>
+                    <p>
+                        <label for="txtTotal">Valor Total:</label>
+                        <input type="number" name="txtTotal" id="txtTotal">
+                    </p>
+                </form>
+                <h2>Calculadora</h2>
+                <div id="conteudoCalculadora"></div>
+            </div>
+        </article>
         <script>
-
             EscondeDivs("tabuada");
-
         </script>
-
     </main>
-
 </body>
 
 </html>
