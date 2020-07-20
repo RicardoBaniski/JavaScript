@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tam = 12;
+
+        function IncText() {
+            tam++;
+            document.getElementById("p1").style.fontSize = tam + "px";
+            document.getElementById("p2").style.fontSize = tam + "px";
+        }
+
+        function DecText() {
+            tam--;
+            document.getElementById("p1").style.fontSize = tam + "px";
+            document.getElementById("p2").style.fontSize = tam + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        IncText();
+    </script>
+    <input type="button" name="binc" id="binc" value="+" onclick="IncText()">
+    <input type="button" name="bdec" id="bdec" value="-" onclick="DecText()">
+    </form>
+    <p id="p1">
+        Exemplo de comom alterar o tamanho da fontede um parágrafo
+    </p>
+    <p id="p2">
+        Visite o site
+        <a href="http://www.imdb.com">IMDB
+        </a>
+    </p>
+</body>
+
+</html>
