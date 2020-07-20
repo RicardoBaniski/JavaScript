@@ -9,9 +9,7 @@
 </head>
 
 <body>
-
     <script>
-
         function EscondeDivs(id) {
             document.getElementById("tabuada").style.display = "none";
             document.getElementById("calculadora").style.display = "none";
@@ -35,7 +33,6 @@
             var result = eval(valorA + operação + valorB);
             document.form1.txtTotal.value = result;
         }
-
     </script>
     <main>
         <nav>
@@ -55,8 +52,7 @@
                 <form id="formTabuada" name="formTabuada" method="post">
                     <label for="number">Informe um número para mostrar a Tabuada:</label>
                     <input type="number" name="number" id="button"></input>
-                    <input type="button" name="button" id="button" value="Exibir Tabuada"
-                        onclick="ExecutaTabuada()"></input>
+                    <input type="button" name="button" id="button" value="Exibir Tabuada" onclick="ExecutaTabuada()"></input>
                 </form>
                 <h2>Tabuada</h2>
                 <div id="conteudoTabuada"></div>
@@ -80,7 +76,6 @@
                         <input type="number" name="txtTotal" id="txtTotal">
                     </p>
                 </form>
-                <h2>Calculadora</h2>
                 <div id="conteudoCalculadora"></div>
             </div>
         </article>
